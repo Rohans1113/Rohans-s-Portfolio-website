@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan's Dev Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #000428, #004e92);
+            color: white;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+        section {
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 80px 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+        }
+        .typing-container {
+            font-size: 32px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            background: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="typing-text"></h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Passionate about technology, coding, and creativity. I specialize in programming, photography, and video editing.</p>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>C, C++, Python, Java</li>
+            <li>HTML, CSS, JavaScript, React.js</li>
+            <li>Swift, R Programming</li>
+            <li>AutoCAD, Final Cut Pro</li>
+            <li>Photography, Japanese</li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Coming soon...</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Phone: +91 9619158895<br>Email: rohansachin@icloud.com<br>LinkedIn: <a href="https://www.linkedin.com/in/rohan-sachin-106538247/" target="_blank">linkedin.com/in/rohan-sachin-106538247</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Rohan's Dev Hub. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.style.background = 'linear-gradient(to right, #000428, #004e92)';
+            } else {
+                document.body.style.background = 'linear-gradient(to right, #1e3c72, #2a5298)';
+            }
+        }
+        
+        const text = "Welcome to Rohan's Dev Hub";
+        let index = 0;
+        function typeEffect() {
+            document.querySelector(".typing-text").textContent = text.slice(0, index++);
+            if (index <= text.length) {
+                setTimeout(typeEffect, 100);
+            }
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+            typeEffect();
+        });
+    </script>
+</body>
+</html>
