@@ -8,6 +8,7 @@
     <script defer src="script.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+        
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -16,7 +17,9 @@
             color: white;
             text-align: center;
             overflow-x: hidden;
+            transition: background 0.5s ease-in-out;
         }
+
         header {
             background: rgba(0, 0, 0, 0.9);
             color: white;
@@ -28,24 +31,29 @@
             left: 0;
             z-index: 1000;
         }
+
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
+
         nav ul li {
             display: inline;
             margin: 0 20px;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 18px;
             transition: 0.3s;
         }
+
         nav ul li a:hover {
             color: #ffcc00;
         }
+
         section {
             padding: 80px 20px;
             background: rgba(255, 255, 255, 0.1);
@@ -53,6 +61,7 @@
             border-radius: 10px;
             box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
         }
+
         .typing-container {
             font-size: 32px;
             font-weight: bold;
@@ -61,19 +70,21 @@
             align-items: center;
             height: 100vh;
         }
+
         .stars {
             color: gold;
             font-size: 20px;
         }
+
         footer {
             background: rgba(0, 0, 0, 0.9);
             color: white;
             text-align: center;
             padding: 20px;
-            position: relative;
-            bottom: 0;
             width: 100%;
+            bottom: 0;
         }
+
         button {
             background: #ffcc00;
             border: none;
@@ -83,8 +94,14 @@
             cursor: pointer;
             transition: 0.3s;
         }
+
         button:hover {
             background: #ff9900;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
         }
     </style>
 </head>
@@ -100,54 +117,53 @@
             </ul>
         </nav>
     </header>
-    
+
     <section id="about">
         <h2>About Me</h2>
-        <p>Hey, I am Rohan Sachin, a passionate about tech geek who loves coding, algorithms, science and astronomy. I specialize in programming, photography, and video editing. This is my personal portfolio website about the various skills and projects I have worked on and will work be working on.</p>
+        <p>Hey, I am Rohan Sachin, a tech enthusiast who loves coding, algorithms, science, and astronomy.  
+           I specialize in programming, photography, and video editing. This portfolio showcases my skills  
+           and projects, including both past and upcoming works.</p>
         <button onclick="toggleTheme()">Toggle Theme</button>
     </section>
-    
+
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>🔵 C <span class="stars">★★★★★</span><br>🔷 C++. <span class="stars">★★★★★</span></li>
-            <li>🐍 Python <span class="stars">★★★★☆</span></li>
-            <li>☕ Java <span class="stars">★★★★☆</span></li>
-            <li>🌐 HTML <span class="stars">★★★★★</span><br>🎨 CSS. <span class="stars">★★★★★</span><br>⚡ JavaScript. <span class="stars">★★★★★</span></li>
-            <li>⚛️ React.js <span class="stars">★★★★☆</span></li>
-            <li>🍏 Swift <span class="stars">★★★☆☆</span></li>
-            <li>📊 R Programming <span class="stars">★★★☆☆</span></li>
-            <li>📐 AutoCAD <span class="stars">★★★★½</span></li>
-            <li>🎬 Final Cut Pro <span class="stars">★★★★☆</span></li>
-            <li>📷 Photography <span class="stars">★★★★★</span></li>
+            <li>🔵 C <span class="stars">★★★★★</span> | 🔷 C++ <span class="stars">★★★★★</span></li>
+            <li>🐍 Python <span class="stars">★★★★☆</span> | ☕ Java <span class="stars">★★★★☆</span></li>
+            <li>🌐 HTML <span class="stars">★★★★★</span> | 🎨 CSS <span class="stars">★★★★★</span> | ⚡ JavaScript <span class="stars">★★★★★</span></li>
+            <li>⚛️ React.js <span class="stars">★★★★☆</span> | 🍏 Swift <span class="stars">★★★☆☆</span></li>
+            <li>📊 R Programming <span class="stars">★★★☆☆</span> | 📐 AutoCAD <span class="stars">★★★★½</span></li>
+            <li>🎬 Final Cut Pro <span class="stars">★★★★☆</span> | 📷 Photography <span class="stars">★★★★★</span></li>
             <li>🗾 Japanese <span class="stars">★★☆☆☆</span></li>
         </ul>
     </section>
-    
+
     <section id="projects">
         <h2>Projects</h2>
         <p>Coming soon...</p>
     </section>
-    
+
     <section id="contact">
         <h2>Contact</h2>
-        <p>Phone: +91 9619158895<br>Email: rohansachin@icloud.com<br>LinkedIn: <a href="https://www.linkedin.com/in/rohan-sachin-106538247/" target="_blank">linkedin.com/in/rohan-sachin-106538247</a><br>Instagram: <a href="https://www.instagram.com/rohan__0111/" target="_blank">instagram.com/rohan__0111</a><br>Twitter: <a href="https://x.com/RohanS70" target="_blank">x.com/RohanS70</a></p>
+        <p>
+            📞 Phone: +91 9619158895<br>
+            📧 Email: rohansachin@icloud.com<br>
+            🔗 LinkedIn: <a href="https://www.linkedin.com/in/rohan-sachin-106538247/" target="_blank">rohan-sachin</a><br>
+            📸 Instagram: <a href="https://www.instagram.com/rohan__0111/" target="_blank">@rohan__0111</a><br>
+            🐦 Twitter: <a href="https://x.com/RohanS70" target="_blank">@RohanS70</a>
+        </p>
     </section>
-    
+
     <footer>
         <p>&copy; 2025 Rohan Sachin. All rights reserved.</p>
     </footer>
-    
+
     <script>
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
-                document.body.style.background = 'linear-gradient(to right, #000428, #004e92)';
-            } else {
-                document.body.style.background = 'linear-gradient(to right, #1e3c72, #2a5298)';
-            }
         }
-        
+
         const text = "Welcome to Rohan's Dev Hub";
         let index = 0;
         function typeEffect() {
@@ -156,9 +172,8 @@
                 setTimeout(typeEffect, 100);
             }
         }
-        document.addEventListener("DOMContentLoaded", () => {
-            typeEffect();
-        });
+
+        document.addEventListener("DOMContentLoaded", typeEffect);
     </script>
 </body>
-</html> 
+</html>
